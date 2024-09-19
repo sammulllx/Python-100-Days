@@ -6,6 +6,7 @@ Author: 骆昊
 Date: 2018-03-08
 """
 
+from time import sleep
 import time
 import os
 
@@ -42,10 +43,59 @@ class Clock(object):
 
 
 if __name__ == '__main__':
-    # clock = Clock(hour=10, minute=5, second=58)
-    clock = Clock()
+    clock = Clock(hour=10, minute=5, second=58)
+    # clock = Clock()
     while True:
         os.system('clear')
         print(clock.show())
         time.sleep(1)
         clock.run()
+    # print(time.localtime(time.time()).tm_hour)
+
+
+# # 简单版
+
+
+# class Clock(object):
+#     """数字时钟"""
+
+#     def __init__(self, hour=0, minute=0, second=0):
+#         """初始化方法
+
+#         :param hour: 时
+#         :param minute: 分
+#         :param second: 秒
+#         """
+#         self._hour = hour
+#         self._minute = minute
+#         self._second = second
+
+#     def run(self):
+#         """走字"""
+#         self._second += 1
+#         if self._second == 60:
+#             self._second = 0
+#             self._minute += 1
+#             if self._minute == 60:
+#                 self._minute = 0
+#                 self._hour += 1
+#                 if self._hour == 24:
+#                     self._hour = 0
+
+#     def show(self):
+#         """显示时间"""
+#         return '%02d:%02d:%02d' % \
+#                (self._hour, self._minute, self._second)
+
+
+# def main():
+#     clock = Clock(second=58, minute=59, hour=23)
+#     while True:
+#         os.system('clear')
+#         print(clock.show())
+#         sleep(1)
+#         clock.run()
+
+
+# if __name__ == '__main__':
+#     main()
