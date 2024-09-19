@@ -25,9 +25,9 @@ class Car(object):
     def brand(self, brand):
         self._brand = brand
 
-    @brand.deleter
-    def brand(self):
-        del self._brand
+    # @brand.deleter
+    # def brand(self):
+    #     del self._brand
 
     @property
     def max_speed(self):
