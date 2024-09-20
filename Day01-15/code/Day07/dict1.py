@@ -20,10 +20,13 @@ def main():
     if '武则天' in scores:
         print(scores['武则天'])
     print(scores.get('武则天'))
+    print(scores)
     print(scores.get('武则天', 60))
+    print(scores)
     print(scores.popitem())
     print(scores.popitem())
     print(scores.pop('骆昊', 100))
+    print(scores)
     scores.clear()
     print(scores)
 

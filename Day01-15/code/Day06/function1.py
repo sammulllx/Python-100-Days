@@ -9,10 +9,21 @@ Date: 2018-03-05
 
 # 将求阶乘的功能封装成一个函数
 def factorial(n):
-    result = 1
-    for num in range(1, n + 1):
-        result *= num
-    return result
+    """
+    计算 n 的阶乘
+    阶乘是指从 1 乘到 n，表示为 n! = 1 * 2 * 3 * ... * n
+    :param n: 需要计算阶乘的整数
+    :return: n 的阶乘值
+    """
+    result = 1  # 初始值为 1，因为乘法的444444444444444444444444444444444444444444444444444444444444444444444444444初始值为 1
+    for num in range(1, n + 1):  # 从 1 到 n 的所有整数进行循环
+        result *= num  # 每次循环将当前值乘以 result
+    return result  # 返回计算得到的阶乘结果
 
 
+# 计算组合数C(7,3)
+# 组合数C(n,k)的公式为：C(n,k) = n! / (k! * (n - k)!)
+# 这里 C(7,3) = 7! / (3! * 4!)
+
+# 先求7的阶乘，再除以3的阶乘和4的阶乘（4是因为 7 - 3 = 4） //是整数除法
 print(factorial(7) // factorial(3) // factorial(4))

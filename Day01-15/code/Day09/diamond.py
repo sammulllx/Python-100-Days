@@ -15,14 +15,14 @@ class A(object):
         print('foo of A')
 
 
-class B(A):
-    pass
-
-
 class C(A):
 
     def foo(self):
         print('foo fo C')
+
+
+class B(A):
+    pass
 
 
 class D(B, C):
