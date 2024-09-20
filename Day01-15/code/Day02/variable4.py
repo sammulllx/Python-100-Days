@@ -17,6 +17,21 @@ print(type(a))
 print(type(b))
 print(type(c))
 print(type(d))
+print(d)
+d = 1 + 5j
+
+# 获取实部
+print(d.real)  # 输出 1.0
+
+# 获取虚部
+print(d.imag)  # 输出 5.0
+
+# 复数的共轭
+print(d.conjugate())  # 输出 (1-5j)
+
+# 复数加法
+z = d + (3 + 2j)
+print(z)  # 输出 (4+7j)
 print(type(e))
 print(type(f))
 print(type(g))

@@ -42,10 +42,12 @@ if __name__ == '__main__':
         print('周长:', tri.perimeter())
         print('面积:', tri.area())
         # 如果传入对象作为方法参数也可以通过类调用实例方法
-        # print('周长:', Triangle.perimeter(tri))
-        # print('面积:', Triangle.area(tri))
+        print('周长:', Triangle.perimeter(tri))
+        print('面积:', Triangle.area(tri))
         # 看看下面的代码就知道其实二者本质上是一致的
-        # print(type(tri.perimeter))
-        # print(type(Triangle.perimeter))
+        # 当通过实例调用方法时，方法会被绑定到这个实例，也就是绑定方法，这个绑定包含了实例对象的信息。
+        print(type(tri.perimeter))
+        # 当通过类名访问方法时，方法并没有绑定到任何具体的实例，所以此时它是一个未绑定方法，或者说是一个普通的函数。
+        print(type(Triangle.perimeter))
     else:
         print('不能构成三角形.')
