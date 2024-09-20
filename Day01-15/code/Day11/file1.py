@@ -7,9 +7,11 @@ Date: 2018-03-13
 """
 
 import time
+import os
 
 
 def main():
+
     # 一次性读取整个文件内容
     with open('致橡树.txt', 'r', encoding='utf-8') as f:
         print(f.read())
@@ -18,14 +20,15 @@ def main():
     with open('致橡树.txt', mode='r') as f:
         for line in f:
             print(line, end='')
-            time.sleep(0.5)
+            # time.sleep(0.5)
     print()
 
     # 读取文件按行读取到列表中
     with open('致橡树.txt') as f:
         lines = f.readlines()
     print(lines)
-    
+
 
 if __name__ == '__main__':
+    print(os.getcwd())
     main()
